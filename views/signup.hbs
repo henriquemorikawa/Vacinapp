@@ -1,0 +1,49 @@
+<head>
+  <link rel="stylesheet" href="/styles/login.css">
+  <div class="login-page">
+    <div class="form">
+      <form action="/signup" method="post">
+        <div>
+          <input type="text" name="userName" placeholder="Digite seu nome completo">
+          {{#if userNameErrors}}
+          {{#each userNameErrors}}
+          <span class="warning">{{this}}</span>
+          {{/each}}
+          {{/if}}
+        </div>
+
+        <div>
+          <input type="text" name="userEmail" placeholder="Digite seu email">
+          {{#if userEmailErrors}}
+          <span class="warning">{{userEmailErrors.[0]}}</span>
+          {{/if}}
+        </div>
+
+        <div>
+          <input type="password" name="userPassword" placeholder="Crie a sua senha de acesso">
+          {{#if userPasswordErrors}}
+          <span class="warning">{{userPasswordErrors.[0]}}</span>
+          {{/if}}
+        </div>
+
+        <div>
+
+          <input type="string" name="userBirthDate" placeholder="Sua idade" id="userBirthDate">
+          {{#if userBirthDateErrors}}
+          <span class="warning">{{userBirthDateErrors.[0]}}</span>
+          {{/if}}
+        </div>
+
+        <div>
+
+          <input type="string" name="userZipCode" placeholder="Código postal">
+          {{#if userZipCodeErrors}}
+          <span class="warning">{{userZipCodeErrors.[0]}}</span>
+          {{/if}}
+        </div>
+
+        <button type="submit">Efetuar cadastro</button>
+      </form>
+    </div>
+  </div>
+</head>

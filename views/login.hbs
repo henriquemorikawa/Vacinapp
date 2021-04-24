@@ -1,0 +1,25 @@
+<head>
+  <div class="login-page">
+    <div class="form">
+      <link rel="stylesheet" href="/styles/login.css">
+      <form action="/login" method="post">
+        <div>
+          <input type="text" name="userEmail" placeholder="Digite seu email">
+          {{#if userEmailErrors}}
+          <span class="warning">{{userEmailErrors.[0]}}</span>
+          {{/if}}
+        </div>
+
+        <div>
+          <input type="password" name="userPassword" placeholder="Digite sua senha">
+          {{#if userPasswordErrors}}
+          <span class="warning">{{userPasswordErrors.[0]}}</span>
+          {{/if}}
+        </div>
+
+        <button type="submit">Efetuar login</button>
+        <p class="message">Not registered? <a href="/signup">Create an account</a></p>
+      </form>
+    </div>
+  </div>
+</head>

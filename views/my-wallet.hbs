@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/styles/wallet.css">
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<h3>My First Map</h3>
+<input id="input" type="text" name="zipcode" placeholder="Address or Zipcode" value="Pinheiros, SP">
+<button id="search-button" type="submit">Search</button>
+<div id="container">
+  <div id="map">
+
+  </div>
+  <div id="sidebar">
+    <h2>Results</h2>
+    <ul id="places"></ul>
+    <button id="more">Load more results</button>
+  </div>
+</div>
+
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDj6wmIjpczM4k04kXjh5ykY6aKOqSUI94&callback=initMap&libraries=places&v=weekly"
+  async></script>
+<script type="text/javascript" src="/javascripts/maps.js"></script>
+<a href="/logout">Logout</a>
