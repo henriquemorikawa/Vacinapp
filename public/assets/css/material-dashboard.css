@@ -13808,8 +13808,9 @@ Copyright (c) 2015 Daniel Eden
   display: flexbox;
   align-items: center;
   justify-content: space-evenly;
-  /* border: 2px solid red; */
-  margin: 50px;
+  margin-top: 100px;
+  margin-left: 50px;
+  margin-right: auto;
   flex-direction: row
 }
 
